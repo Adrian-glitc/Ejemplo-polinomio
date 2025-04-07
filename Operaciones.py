@@ -1,5 +1,14 @@
 
 from Polinomio import DatoPolinomio
+
+def agregar_termino(self, valor, termino):
+    if termino in self.terminos:
+        self.terminos[termino] += valor
+    else:
+        self.terminos[termino] = valor
+    if termino > self.grado:
+        self.grado = termino
+            
 def __repr__(self):
     terminos = [f"{valor}x^{termino}" for termino, valor in sorted(self.terminos.items(), reverse=True) if valor != 0]
     return " + ".join(terminos) if terminos else "0"

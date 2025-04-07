@@ -1,4 +1,6 @@
 from Polinomio import DatoPolinomio
+from Operaciones import modificar_termino
+from Operaciones import obtener_valor
 
 def main():
     # Crear instancias de DatoPolinomio
